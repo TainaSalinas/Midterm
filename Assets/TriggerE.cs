@@ -6,6 +6,10 @@ public class TriggerE : MonoBehaviour
 {
 
     public GameObject Interact;
+    public bool pos;
+    public GameObject Mouse;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +21,7 @@ public class TriggerE : MonoBehaviour
         if (collision.gameObject.name == "player_front")
         {
             Interact.SetActive(true);
+            pos = true;
         }
     }
 
@@ -25,12 +30,16 @@ public class TriggerE : MonoBehaviour
         if (collision.gameObject.name == "player_front")
         {
             Interact.SetActive(false);
+            pos = false;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (pos == true && Input.GetKeyDown(KeyCode.E))
+        {
+            Mouse.SetActive(true);
+        } 
     }
 }
