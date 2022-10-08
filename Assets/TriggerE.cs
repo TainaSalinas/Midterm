@@ -39,7 +39,7 @@ public class TriggerE : MonoBehaviour
     {
         if (pos == true && Input.GetKeyDown(KeyCode.E))
         {
-            Mouse.SetActive(true);
+           
         } 
     }
 }
