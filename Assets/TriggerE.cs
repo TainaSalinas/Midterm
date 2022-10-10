@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerE : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class TriggerE : MonoBehaviour
     {
         if (pos == true && Input.GetKeyDown(KeyCode.E))
         {
-           
+            SceneManager.LoadScene("SoundDesign", LoadSceneMode.Single);
         } 
     }
 }

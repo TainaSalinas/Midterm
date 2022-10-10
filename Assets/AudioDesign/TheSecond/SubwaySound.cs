@@ -2,45 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RainSound : MonoBehaviour
+public class SubwaySound : MonoBehaviour
 {
-
     public AudioSource mySpace;
     bool isClicked = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void OnMouseEnter()
     {
         if (isClicked == false)
         {
-            GetComponent<Renderer>().material.color = Color.yellow;
+            GetComponent<Renderer>().material.color = Color.grey;
         }
     }
 
     void OnMouseDown()
     {
-        /* GetComponent<Renderer>().material.color = Color.blue;
-         if (GetComponent<Renderer>().material.color == Color.blue)
-         {
-             isClicked = true;
-         } */
-
-
         if (!isClicked)
         {
-            GetComponent<Renderer>().material.color = Color.blue;
+            GetComponent<Renderer>().material.color = Color.yellow;
             isClicked = true;
             this.GetComponent<AudioSource>().Play();
+            GameManager.Instance.assignedNumber = 7;
         }
         else
         {
             GetComponent<Renderer>().material.color = Color.white;
             isClicked = false;
+            GameManager.Instance.assignedNumber = 0;
         }
 
 
@@ -54,9 +48,21 @@ public class RainSound : MonoBehaviour
         }
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (GetComponent<Renderer>().material.color == Color.white)
+        {
+            isClicked = false;
+        }
     }
+
+    /* GetComponent<Renderer>().material.color = Color.blue;
+        if (GetComponent<Renderer>().material.color == Color.blue)
+        {
+            isClicked = true;
+        } */
 }
