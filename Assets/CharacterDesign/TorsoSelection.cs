@@ -44,6 +44,7 @@ public class TorsoSelection : MonoBehaviour
             {
                 one.SetActive(true);
                 score = 1;
+                ScoreSetUp.Instance.torsoNumber = 1;
             }
 
             else if (Input.GetKeyDown(KeyCode.D) && score == 1)

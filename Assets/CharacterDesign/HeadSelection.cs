@@ -42,6 +42,7 @@ public class HeadSelection : MonoBehaviour
             {
                 one.SetActive(true);
                 score = 1;
+                ScoreSetUp.Instance.headNumber = 1;
             }
 
             else if (Input.GetKeyDown(KeyCode.D) && score == 1)
@@ -49,6 +50,7 @@ public class HeadSelection : MonoBehaviour
                 one.SetActive(false);
                 two.SetActive(true);
                 score = 2;
+                ScoreSetUp.Instance.headNumber = 2;
             }
             else if (Input.GetKeyDown(KeyCode.D) && score == 2)
             {

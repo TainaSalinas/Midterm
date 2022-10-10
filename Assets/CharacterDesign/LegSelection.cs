@@ -43,6 +43,7 @@ public class LegSelection : MonoBehaviour
             {
                 one.SetActive(true);
                 score = 1;
+                ScoreSetUp.Instance.legNumber = 1;
             }
 
             else if (Input.GetKeyDown(KeyCode.D) && score == 1)
