@@ -46,7 +46,7 @@ public class CharacterConfirm : MonoBehaviour
 
         if (score == 4)
         {
-            GetComponent<Renderer>().material.color = Color.green;
+            StartCoroutine(TheEnd());
         }
         else
         {
@@ -60,6 +60,17 @@ public class CharacterConfirm : MonoBehaviour
         {
             StartCoroutine(FlashWrong());
         } */
+
+    }
+
+    IEnumerator TheEnd()
+    {
+        head.GetComponent<Renderer>().material.color = Color.green;
+        torso.GetComponent<Renderer>().material.color = Color.green;
+        leg.GetComponent<Renderer>().material.color = Color.green;
+        foot.GetComponent<Renderer>().material.color = Color.green;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
 
     }
 
