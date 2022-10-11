@@ -14,16 +14,17 @@ public class FootSelection : MonoBehaviour
     void Start()
     {
         score = 0;
+        GetComponent<Renderer>().material.color = Color.clear;
     }
 
     void OnMouseEnter()
     {
-
+        GetComponent<Renderer>().material.color = Color.white;
     }
 
     void OnMouseExit()
     {
-
+        GetComponent<Renderer>().material.color = Color.clear;
     }
 
     void OnMouseDown()
@@ -73,6 +74,6 @@ public class FootSelection : MonoBehaviour
     {
         GetComponent<Renderer>().material.color = Color.yellow;
         yield return new WaitForSeconds(0.3f);
-        GetComponent<Renderer>().material.color = Color.white;
+        GetComponent<Renderer>().material.color = Color.clear;
     }
 }
