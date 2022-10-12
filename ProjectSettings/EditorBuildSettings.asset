@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SoundDesign.unity
     guid: 17d1c5474a234f6499a716791a026886
+  - enabled: 1
+    path: Assets/Scenes/CharacterDesign.unity
+    guid: 7ffa942182427a2498b251e2dc212378
+  - enabled: 1
+    path: Assets/Scenes/Backgrounds.unity
+    guid: b371856c296cffa4b90c7b8a39186eed
   m_configObjects: {}

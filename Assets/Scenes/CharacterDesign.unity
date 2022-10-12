@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 213968373}
   - component: {fileID: 213968374}
   m_Layer: 0
-  m_Name: Score
+  m_Name: ClothingTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1470,10 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c02705c7feee24fafb8433692c8464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 769260675}
-  torso: {fileID: 1271707675}
-  leg: {fileID: 437666666}
-  foot: {fileID: 320403227}
+  body: {fileID: 681545383}
   score: 0
 --- !u!61 &1137779299
 BoxCollider2D:

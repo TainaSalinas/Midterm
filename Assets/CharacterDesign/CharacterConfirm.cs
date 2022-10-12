@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharacterConfirm : MonoBehaviour
 {
 
-    public GameObject head;
-    public GameObject torso;
-    public GameObject leg;
-    public GameObject foot;
+    public GameObject body;
     public float score = 0;
 
     // Start is called before the first frame update
@@ -65,10 +62,7 @@ public class CharacterConfirm : MonoBehaviour
 
     IEnumerator TheEnd()
     {
-        head.GetComponent<Renderer>().material.color = Color.green;
-        torso.GetComponent<Renderer>().material.color = Color.green;
-        leg.GetComponent<Renderer>().material.color = Color.green;
-        foot.GetComponent<Renderer>().material.color = Color.green;
+        body.GetComponent<Renderer>().material.color = Color.green;
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
 
@@ -76,17 +70,17 @@ public class CharacterConfirm : MonoBehaviour
 
     IEnumerator FlashWrong()
     {
-        GetComponent<Renderer>().material.color = Color.red;
+        body.GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        GetComponent<Renderer>().material.color = Color.white;
+        body.GetComponent<Renderer>().material.color = Color.white;
         yield return new WaitForSeconds(0.1f);
-        GetComponent<Renderer>().material.color = Color.red;
+        body.GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        GetComponent<Renderer>().material.color = Color.white;
+        body.GetComponent<Renderer>().material.color = Color.white;
         yield return new WaitForSeconds(0.1f);
-        GetComponent<Renderer>().material.color = Color.red;
+        body.GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        GetComponent<Renderer>().material.color = Color.white;
+        body.GetComponent<Renderer>().material.color = Color.white;
     }
 
 }
