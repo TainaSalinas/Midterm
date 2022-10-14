@@ -7,38 +7,22 @@ public class FootSelection : MonoBehaviour
     public GameObject one;
     public GameObject two;
     public GameObject three;
-    public bool selected = false;
     public float score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
-        GetComponent<Renderer>().material.color = Color.clear;
-    }
-
-    void OnMouseEnter()
-    {
-        GetComponent<Renderer>().material.color = Color.white;
-    }
-
-    void OnMouseExit()
-    {
-        GetComponent<Renderer>().material.color = Color.clear;
     }
 
     void OnMouseDown()
     {
         StartCoroutine(Flash());
-        selected = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (selected == true)
-        {
             if (Input.GetKeyDown(KeyCode.D) && score == 0)
             {
                 one.SetActive(true);
@@ -67,7 +51,6 @@ public class FootSelection : MonoBehaviour
                 score = 0;
                 ScoreSetUp.Instance.footNumber = 0;
             }
-        }
     }
 
     IEnumerator Flash()

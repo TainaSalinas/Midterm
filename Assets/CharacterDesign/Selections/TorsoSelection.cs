@@ -9,38 +9,22 @@ public class TorsoSelection : MonoBehaviour
     public GameObject three;
     public GameObject four;
     public GameObject five;
-    public bool selected = false;
     public float score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
-        GetComponent<Renderer>().material.color = Color.clear;
-    }
-
-    void OnMouseEnter()
-    {
-        GetComponent<Renderer>().material.color = Color.white;
-    }
-
-    void OnMouseExit()
-    {
-        GetComponent<Renderer>().material.color = Color.clear;
     }
 
     void OnMouseDown()
     {
         StartCoroutine(Flash());
-        selected = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (selected == true)
-        {
             if (Input.GetKeyDown(KeyCode.D) && score == 0)
             {
                 one.SetActive(true);
@@ -117,7 +101,6 @@ public class TorsoSelection : MonoBehaviour
               {
                   score = 5;
               } */
-        }
     }
 
     IEnumerator Flash()

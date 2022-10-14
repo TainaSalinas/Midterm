@@ -5,32 +5,32 @@ using UnityEngine;
 public class BG : MonoBehaviour
 {
 
-    public GameObject MG;
-    public GameObject FG;
+    public GameObject BGSelect;
+    public GameObject MGSelect;
+    public GameObject FGSelect;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<Renderer>().material.color = Color.clear;
     }
 
     void OnMouseEnter()
     {
         GetComponent<Renderer>().material.color = Color.blue;
-        MG.SetActive(false);
-        FG.SetActive(false);
 
     }
 
     void OnMouseExit()
     {
-        GetComponent<Renderer>().material.color = Color.white;
-        MG.SetActive(true);
-        FG.SetActive(true);
+        GetComponent<Renderer>().material.color = Color.clear;
     }
 
     void OnMouseDown()
     {
-
+        BGSelect.SetActive(true);
+        MGSelect.SetActive(false);
+        FGSelect.SetActive(false);
     }
 
     // Update is called once per frame

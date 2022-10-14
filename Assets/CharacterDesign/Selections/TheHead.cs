@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Foreground : MonoBehaviour
+public class TheHead : MonoBehaviour
 {
-
-    public GameObject BGSelect;
-    public GameObject MGSelect;
-    public GameObject FGSelect;
+    public GameObject HeadOutfits;
+    public GameObject TorsoOutfits;
+    public GameObject LegOutfits;
+    public GameObject FootOutfits;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class Foreground : MonoBehaviour
 
     void OnMouseEnter()
     {
-        GetComponent<Renderer>().material.color = Color.red;
+        GetComponent<Renderer>().material.color = Color.white;
     }
 
     void OnMouseExit()
@@ -27,9 +27,10 @@ public class Foreground : MonoBehaviour
 
     void OnMouseDown()
     {
-        FGSelect.SetActive(true);
-        BGSelect.SetActive(false);
-        MGSelect.SetActive(false);
+        HeadOutfits.SetActive(true);
+        TorsoOutfits.SetActive(false);
+        LegOutfits.SetActive(false);
+        FootOutfits.SetActive(false);
     }
 
     // Update is called once per frame
