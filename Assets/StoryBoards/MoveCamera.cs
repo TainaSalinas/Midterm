@@ -22,6 +22,6 @@ public class MoveCamera : MonoBehaviour
     void OnMouseDown()
     {
         cam.GetComponent<Renderer>().material.color = Color.red;
-        cam.transform.position = new Vector3(15, -0.7954547f, -0.6589293f);
+        cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(47, 0.03f, -0.6589293f), 0.5f);
     }
 }

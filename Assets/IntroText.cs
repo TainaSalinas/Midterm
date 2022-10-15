@@ -24,28 +24,28 @@ public class IntroText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && number == 0)
+        if (Input.GetKeyDown(KeyCode.E) && number == 0)
         {
             Text2.SetActive(true);
             Text1.SetActive(false);
             number = 1;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && number == 1)
+        else if (Input.GetKeyDown(KeyCode.E) && number == 1)
         {
             Text3.SetActive(true);
             Text2.SetActive(false);
             number = 2;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && number == 2)
+        else if (Input.GetKeyDown(KeyCode.E) && number == 2)
         {
             Text4.SetActive(true);
             Text3.SetActive(false);
             number = 3;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && number == 3)
+        else if (Input.GetKeyDown(KeyCode.E) && number == 3)
         {
             Text4.SetActive(false);
             number = 4;
