@@ -8,13 +8,26 @@ public class Paint : MonoBehaviour
     public Camera m_camera;
     public GameObject brush;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
+
     LineRenderer currentLineRenderer;
 
     Vector2 lastPos;
 
+    void Start()
+    {
+        Cursor.visible = true;
+    }
+
     void Update()
     {
         Draw();
+    }
+
+    void OnMouseDown()
+    {
+        ChangeSprite();
     }
 
     void Draw()
@@ -54,5 +67,10 @@ public class Paint : MonoBehaviour
         currentLineRenderer.positionCount++;
         int positionIndex = currentLineRenderer.positionCount - 1;
         currentLineRenderer.SetPosition(positionIndex, pointPos);
+    }
+
+    void ChangeSprite()
+    {
+        spriteRenderer.sprite = newSprite;
     }
 }
