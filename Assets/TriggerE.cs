@@ -7,7 +7,9 @@ public class TriggerE : MonoBehaviour
 {
 
     public GameObject Interact;
+    public GameObject TryAgain;
     public bool pos;
+    public bool neg = false;
     public GameObject Mouse;
 
 
@@ -19,10 +21,15 @@ public class TriggerE : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "player_front")
+        if (collision.gameObject.name == "player_front" && TheScreens.Complete == 40)
         {
             Interact.SetActive(true);
             pos = true;
+        }
+        else
+        {
+            Interact.SetActive(true);
+            neg = true;
         }
     }
 
@@ -32,6 +39,8 @@ public class TriggerE : MonoBehaviour
         {
             Interact.SetActive(false);
             pos = false;
+            TryAgain.SetActive(false);
+            neg = false;
         }
     }
 
@@ -41,6 +50,10 @@ public class TriggerE : MonoBehaviour
         if (pos == true && Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene("SoundDesign", LoadSceneMode.Single);
-        } 
+        }
+        else if (neg == true && Input.GetKeyDown(KeyCode.E))
+        {
+            TryAgain.SetActive(true);
+        }
     }
 }

@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TriggerBG : MonoBehaviour
+public class TriggerStory : MonoBehaviour
 {
-
     public GameObject Interact;
     public GameObject TryAgain;
     public bool pos;
-    public bool neg = true;
+    public bool neg = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "player_front" && TheScreens.Complete == 20)
+        if (collision.gameObject.name == "player_front" && TheScreens.Complete == 10)
         {
             Interact.SetActive(true);
             pos = true;
@@ -47,8 +45,9 @@ public class TriggerBG : MonoBehaviour
     {
         if (pos == true && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene("Backgrounds", LoadSceneMode.Single);
+            SceneManager.LoadScene("Storyboards", LoadSceneMode.Single);
         }
+
         else if (neg == true && Input.GetKeyDown(KeyCode.E))
         {
             TryAgain.SetActive(true);
