@@ -9,6 +9,10 @@ public class TheFoot : MonoBehaviour
     public GameObject TorsoOutfits;
     public GameObject LegOutfits;
     public GameObject FootOutfits;
+    public GameObject HeadArrow;
+    public GameObject TorsoArrow;
+    public GameObject LegArrow;
+    public GameObject FootArrow;
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +33,13 @@ public class TheFoot : MonoBehaviour
     void OnMouseDown()
     {
         FootOutfits.SetActive(true);
+        FootArrow.SetActive(true);
         TorsoOutfits.SetActive(false);
         LegOutfits.SetActive(false);
         HeadOutfits.SetActive(false);
+        TorsoArrow.SetActive(false);
+        LegArrow.SetActive(false);
+        HeadArrow.SetActive(false);
     }
 
     // Update is called once per frame

@@ -9,7 +9,7 @@ public class TriggerBG : MonoBehaviour
     public GameObject Interact;
     public GameObject TryAgain;
     public bool pos;
-    public bool neg = true;
+    public bool neg = false;
 
     // Start is called before the first frame update
     void Start()

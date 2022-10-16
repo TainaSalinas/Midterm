@@ -65,7 +65,6 @@ public class CharacterConfirm : MonoBehaviour
         body.GetComponent<Renderer>().material.color = Color.green;
         yield return new WaitForSeconds(1);
         TheScreens.Complete = 10;
-        Debug.Log("10");
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
 
     }
