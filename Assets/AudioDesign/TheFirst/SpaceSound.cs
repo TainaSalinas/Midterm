@@ -5,6 +5,10 @@ using UnityEngine;
 public class SpaceSound : MonoBehaviour
 {
     public AudioSource mySpace;
+    public GameObject SPACE;
+    public GameObject RAIN;
+    public GameObject WIND;
+    public GameObject WAVE;
     bool isClicked = false;
     // Start is called before the first frame update
     void Start()
@@ -27,31 +31,19 @@ public class SpaceSound : MonoBehaviour
         {
             isClicked = true;
         } */
-
-
-        if (!isClicked)
-        {
-            GetComponent<Renderer>().material.color = Color.yellow;
+            RAIN.SetActive(false);
+            SPACE.SetActive(true);
+            WIND.SetActive(false);
+            WAVE.SetActive(false);
+            /*GetComponent<Renderer>().material.color = Color.yellow;
             isClicked = true;
             this.GetComponent<AudioSource>().Play();
-            GameManager.Instance.assignedNumber = 4;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-            isClicked = false;
-            GameManager.Instance.assignedNumber = 0;
-        }
-        
-
+            GameManager.Instance.assignedNumber = 4;*/
     }
 
     void OnMouseExit()
     {
-        if (isClicked == false)
-        {
             GetComponent<Renderer>().material.color = Color.white;
-        }
     }
 
     

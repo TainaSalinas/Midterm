@@ -6,6 +6,10 @@ public class WindSound : MonoBehaviour
 {
 
     public AudioSource mySpace;
+    public GameObject SPACE;
+    public GameObject RAIN;
+    public GameObject WIND;
+    public GameObject WAVE;
     bool isClicked = false;
 
     // Start is called before the first frame update
@@ -24,36 +28,15 @@ public class WindSound : MonoBehaviour
 
     void OnMouseDown()
     {
-        /* GetComponent<Renderer>().material.color = Color.blue;
-         if (GetComponent<Renderer>().material.color == Color.blue)
-         {
-             isClicked = true;
-         } */
-
-
-        if (!isClicked)
-        {
-            GetComponent<Renderer>().material.color = Color.yellow;
-            isClicked = true;
-            this.GetComponent<AudioSource>().Play();
-            GameManager.Instance.assignedNumber = 2;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-            isClicked = false;
-            GameManager.Instance.assignedNumber = 0;
-        }
-
-
+        RAIN.SetActive(false);
+        SPACE.SetActive(false);
+        WIND.SetActive(true);
+        WAVE.SetActive(false);
     }
 
     void OnMouseExit()
     {
-        if (isClicked == false)
-        {
             GetComponent<Renderer>().material.color = Color.white;
-        }
     }
 
     // Update is called once per frame

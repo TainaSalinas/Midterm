@@ -9,7 +9,8 @@ public class RainSound : MonoBehaviour
     bool isClicked = false;
     public GameObject SPACE;
     public GameObject RAIN;
-    public bool selected = false;
+    public GameObject WIND;
+    public GameObject WAVE;
 
     // Start is called before the first frame update
     void Start()
@@ -26,31 +27,24 @@ public class RainSound : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!isClicked)
-        {
-            GetComponent<Renderer>().material.color = Color.yellow;
+            RAIN.SetActive(true);
+            SPACE.SetActive(false);
+            WIND.SetActive(false);
+            WAVE.SetActive(false);
+            /*GetComponent<Renderer>().material.color = Color.yellow;
             isClicked = true;
             selected = true;
             this.GetComponent<AudioSource>().Play();
             GameManager.Instance.assignedNumber = 1;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-            this.GetComponent<AudioSource>().Play();
-            isClicked = false;
-            selected = false;
-            GameManager.Instance.assignedNumber = 0;
-        }
+            */
+           // GetComponent<Renderer>().material.color = Color.white;
+           // this.GetComponent<AudioSource>().Play();
     }
 
 
     void OnMouseExit()
     {
-        if (isClicked == false)
-        {
             GetComponent<Renderer>().material.color = Color.white;
-        }
     }
 
     // Update is called once per frame
