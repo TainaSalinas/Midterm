@@ -6,6 +6,10 @@ public class FootstepSound : MonoBehaviour
 {
     public AudioSource mySpace;
     bool isClicked = false;
+    public GameObject ANIMAL;
+    public GameObject BIKE;
+    public GameObject CAR;
+    public GameObject FOOTSTEP;
 
     // Start is called before the first frame update
     void Start()
@@ -23,21 +27,10 @@ public class FootstepSound : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!isClicked)
-        {
-            GetComponent<Renderer>().material.color = Color.yellow;
-            isClicked = true;
-            this.GetComponent<AudioSource>().Play();
-            GameManager.Instance.assignedNumber = 9;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-            isClicked = false;
-            GameManager.Instance.assignedNumber = 0;
-        }
-
-
+        ANIMAL.SetActive(false);
+        BIKE.SetActive(false);
+        CAR.SetActive(false);
+        FOOTSTEP.SetActive(true);
     }
 
     void OnMouseExit()

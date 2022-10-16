@@ -147,6 +147,7 @@ public GameObject trapdoor;
         bicycle.GetComponent<Renderer>().material.color = Color.red;
         car.GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(1);
+        TheScreens.Complete = 50;
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
 
     }

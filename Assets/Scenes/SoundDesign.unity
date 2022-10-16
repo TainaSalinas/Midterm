@@ -360,7 +360,6 @@ GameObject:
   - component: {fileID: 205934442}
   - component: {fileID: 205934446}
   - component: {fileID: 205934445}
-  - component: {fileID: 205934444}
   - component: {fileID: 205934443}
   m_Layer: 0
   m_Name: car door (1)
@@ -480,19 +479,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &205934444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205934441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe4918724640c6458f7f3de88c63504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpace: {fileID: 205934443}
 --- !u!61 &205934445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -561,7 +547,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -582,7 +568,6 @@ GameObject:
   - component: {fileID: 305415147}
   - component: {fileID: 305415151}
   - component: {fileID: 305415150}
-  - component: {fileID: 305415149}
   - component: {fileID: 305415148}
   m_Layer: 0
   m_Name: subway open (1)
@@ -702,19 +687,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &305415149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305415146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d939ec36966625c439539c0b1d32d6cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpace: {fileID: 305415148}
 --- !u!61 &305415150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -783,7 +755,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -802,6 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 350417532}
+  - component: {fileID: 350417533}
   m_Layer: 0
   m_Name: ThirdWave
   m_TagString: Untagged
@@ -832,6 +805,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &350417533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350417531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df991e020875d34eac32df7fab75b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CABINET: {fileID: 1045686118}
+  SUBWAY: {fileID: 305415146}
+  CARDOOR: {fileID: 205934441}
+  TRAPDOOR: {fileID: 1448336588}
 --- !u!1 &354896562
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +921,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpace: {fileID: 354896567}
+  TRAPDOOR: {fileID: 1448336588}
+  CABINET: {fileID: 1045686118}
+  SUBWAY: {fileID: 305415146}
+  CARDOOR: {fileID: 205934441}
 --- !u!61 &354896566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1380,6 +1373,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpace: {fileID: 383058750}
+  TRAPDOOR: {fileID: 1448336588}
+  CABINET: {fileID: 1045686118}
+  SUBWAY: {fileID: 305415146}
+  CARDOOR: {fileID: 205934441}
 --- !u!61 &383058749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1602,6 +1599,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpace: {fileID: 405436896}
+  ANIMAL: {fileID: 1441387744}
+  BIKE: {fileID: 1702031543}
+  CAR: {fileID: 1153124241}
+  FOOTSTEP: {fileID: 1810555955}
 --- !u!61 &405436895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1639,7 +1640,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1885,6 +1886,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpace: {fileID: 869606006}
+  ANIMAL: {fileID: 1441387744}
+  BIKE: {fileID: 1702031543}
+  CAR: {fileID: 1153124241}
+  FOOTSTEP: {fileID: 1810555955}
 --- !u!61 &869606005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2107,6 +2112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpace: {fileID: 906674389}
+  ANIMAL: {fileID: 1441387744}
+  BIKE: {fileID: 1702031543}
+  CAR: {fileID: 1153124241}
+  FOOTSTEP: {fileID: 1810555955}
 --- !u!61 &906674388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2285,7 +2294,6 @@ GameObject:
   - component: {fileID: 1045686119}
   - component: {fileID: 1045686123}
   - component: {fileID: 1045686122}
-  - component: {fileID: 1045686121}
   - component: {fileID: 1045686120}
   m_Layer: 0
   m_Name: drawer/cabinet (1)
@@ -2405,19 +2413,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1045686121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045686118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6792b963a9f77d649b5af7b1ceb96567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpace: {fileID: 1045686120}
 --- !u!61 &1045686122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2486,7 +2481,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2957,6 +2952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1135136351}
+  - component: {fileID: 1135136352}
   m_Layer: 0
   m_Name: SecondWave
   m_TagString: Untagged
@@ -2987,6 +2983,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1135136352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135136350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b348f40626722408737b3e45a079a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ANIMAL: {fileID: 1441387744}
+  BIKE: {fileID: 1702031543}
+  CAR: {fileID: 1153124241}
+  FOOTSTEP: {fileID: 1810555955}
 --- !u!1 &1153124241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,7 +3010,6 @@ GameObject:
   - component: {fileID: 1153124242}
   - component: {fileID: 1153124246}
   - component: {fileID: 1153124245}
-  - component: {fileID: 1153124244}
   - component: {fileID: 1153124243}
   m_Layer: 0
   m_Name: car (1)
@@ -3118,19 +3129,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1153124244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153124241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f70581fecc10b49971b5c627182efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpace: {fileID: 1153124243}
 --- !u!61 &1153124245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3199,7 +3197,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3309,6 +3307,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpace: {fileID: 1376216607}
+  ANIMAL: {fileID: 1441387744}
+  BIKE: {fileID: 1702031543}
+  CAR: {fileID: 1153124241}
+  FOOTSTEP: {fileID: 1810555955}
 --- !u!61 &1376216606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3629,7 +3631,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3837,7 +3839,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 0.9039983, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4066,7 +4068,6 @@ GameObject:
   - component: {fileID: 1441387745}
   - component: {fileID: 1441387749}
   - component: {fileID: 1441387748}
-  - component: {fileID: 1441387747}
   - component: {fileID: 1441387746}
   m_Layer: 0
   m_Name: animals (1)
@@ -4186,19 +4187,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1441387747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441387744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d37d54fadcb194abc242f9c503cb01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpace: {fileID: 1441387746}
 --- !u!61 &1441387748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4267,7 +4255,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4288,7 +4276,6 @@ GameObject:
   - component: {fileID: 1448336589}
   - component: {fileID: 1448336593}
   - component: {fileID: 1448336592}
-  - component: {fileID: 1448336591}
   - component: {fileID: 1448336590}
   m_Layer: 0
   m_Name: trapdoor (1)
@@ -4408,19 +4395,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1448336591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448336588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e724d80c81fa642bde9b6acf72145f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpace: {fileID: 1448336590}
 --- !u!61 &1448336592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4489,7 +4463,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4737,6 +4711,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpace: {fileID: 1652231505}
+  TRAPDOOR: {fileID: 1448336588}
+  CABINET: {fileID: 1045686118}
+  SUBWAY: {fileID: 305415146}
+  CARDOOR: {fileID: 205934441}
 --- !u!61 &1652231504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5057,7 +5035,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5078,7 +5056,6 @@ GameObject:
   - component: {fileID: 1702031544}
   - component: {fileID: 1702031548}
   - component: {fileID: 1702031547}
-  - component: {fileID: 1702031546}
   - component: {fileID: 1702031545}
   m_Layer: 0
   m_Name: bicycle (1)
@@ -5198,19 +5175,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1702031546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1702031543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7fe7c55c4fee74c9d89d975373e1f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpace: {fileID: 1702031545}
 --- !u!61 &1702031547
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5279,7 +5243,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5300,7 +5264,6 @@ GameObject:
   - component: {fileID: 1810555956}
   - component: {fileID: 1810555960}
   - component: {fileID: 1810555959}
-  - component: {fileID: 1810555958}
   - component: {fileID: 1810555957}
   m_Layer: 0
   m_Name: footsteps (1)
@@ -5420,19 +5383,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1810555958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810555955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e044089963320d47b7acc590b90487b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpace: {fileID: 1810555957}
 --- !u!61 &1810555959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5501,7 +5451,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8cc58e4c9bd4e043981d5ab8ba82645, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5751,6 +5701,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpace: {fileID: 2038676820}
+  TRAPDOOR: {fileID: 1448336588}
+  CABINET: {fileID: 1045686118}
+  SUBWAY: {fileID: 305415146}
+  CARDOOR: {fileID: 205934441}
 --- !u!61 &2038676819
 BoxCollider2D:
   m_ObjectHideFlags: 0

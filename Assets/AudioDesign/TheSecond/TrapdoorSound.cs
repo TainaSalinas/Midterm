@@ -6,6 +6,10 @@ public class TrapdoorSound : MonoBehaviour
 {
     public AudioSource mySpace;
     bool isClicked = false;
+    public GameObject TRAPDOOR;
+    public GameObject CABINET;
+    public GameObject SUBWAY;
+    public GameObject CARDOOR;
 
     // Start is called before the first frame update
     void Start()
@@ -23,29 +27,16 @@ public class TrapdoorSound : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!isClicked)
-        {
-            GetComponent<Renderer>().material.color = Color.yellow;
-            isClicked = true;
-            this.GetComponent<AudioSource>().Play();
-            GameManager.Instance.assignedNumber = 8;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-            isClicked = false;
-            GameManager.Instance.assignedNumber = 0;
-        }
-
+        TRAPDOOR.SetActive(true);
+        CABINET.SetActive(false);
+        CARDOOR.SetActive(false);
+        SUBWAY.SetActive(false);
 
     }
 
     void OnMouseExit()
     {
-        if (isClicked == false)
-        {
             GetComponent<Renderer>().material.color = Color.white;
-        }
     }
 
 

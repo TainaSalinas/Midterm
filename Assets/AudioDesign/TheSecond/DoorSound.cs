@@ -5,6 +5,10 @@ using UnityEngine;
 public class DoorSound : MonoBehaviour
 {
     public AudioSource mySpace;
+    public GameObject TRAPDOOR;
+    public GameObject CABINET;
+    public GameObject SUBWAY;
+    public GameObject CARDOOR;
     bool isClicked = false;
 
     // Start is called before the first frame update
@@ -23,19 +27,11 @@ public class DoorSound : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!isClicked)
-        {
-            GetComponent<Renderer>().material.color = Color.yellow;
-            isClicked = true;
-            this.GetComponent<AudioSource>().Play();
-            GameManager.Instance.assignedNumber = 5;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-            isClicked = false;
-            GameManager.Instance.assignedNumber = 0;
-        }
+
+        TRAPDOOR.SetActive(false);
+        CABINET.SetActive(false);
+        CARDOOR.SetActive(true);
+        SUBWAY.SetActive(false);
 
 
     }
