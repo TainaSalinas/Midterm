@@ -17,7 +17,7 @@ public class Midground : MonoBehaviour
 
     void OnMouseEnter()
     {
-        GetComponent<Renderer>().material.color = Color.yellow;
+        GetComponent<Renderer>().material.color = Color.white;
     }
 
     void OnMouseExit()
@@ -30,11 +30,19 @@ public class Midground : MonoBehaviour
         MGSelect.SetActive(true);
         BGSelect.SetActive(false);
         FGSelect.SetActive(false);
+        StartCoroutine(Flash());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator Flash()
+    {
+        GetComponent<Renderer>().material.color = Color.yellow;
+        yield return new WaitForSeconds(0.3f);
+        GetComponent<Renderer>().material.color = Color.clear;
     }
 }

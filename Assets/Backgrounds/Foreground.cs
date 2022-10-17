@@ -17,7 +17,7 @@ public class Foreground : MonoBehaviour
 
     void OnMouseEnter()
     {
-        GetComponent<Renderer>().material.color = Color.red;
+        GetComponent<Renderer>().material.color = Color.white;
     }
 
     void OnMouseExit()
@@ -30,6 +30,7 @@ public class Foreground : MonoBehaviour
         FGSelect.SetActive(true);
         BGSelect.SetActive(false);
         MGSelect.SetActive(false);
+        StartCoroutine(Flash());
     }
 
     // Update is called once per frame
@@ -37,4 +38,11 @@ public class Foreground : MonoBehaviour
     {
         
     }
+    IEnumerator Flash()
+    {
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        GetComponent<Renderer>().material.color = Color.clear;
+    }
+
 }

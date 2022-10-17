@@ -17,7 +17,7 @@ public class BG : MonoBehaviour
 
     void OnMouseEnter()
     {
-        GetComponent<Renderer>().material.color = Color.blue;
+        GetComponent<Renderer>().material.color = Color.white;
 
     }
 
@@ -31,11 +31,19 @@ public class BG : MonoBehaviour
         BGSelect.SetActive(true);
         MGSelect.SetActive(false);
         FGSelect.SetActive(false);
+        StartCoroutine(Flash());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator Flash()
+    {
+        GetComponent<Renderer>().material.color = Color.blue;
+        yield return new WaitForSeconds(0.3f);
+        GetComponent<Renderer>().material.color = Color.clear;
     }
 }
