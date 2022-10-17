@@ -13,6 +13,7 @@ public class FootSelection : MonoBehaviour
     void Start()
     {
         score = 0;
+        ScoreSetUp.Instance.footNumber = 0;
     }
 
     void OnMouseDown()
@@ -23,21 +24,21 @@ public class FootSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (Input.GetKeyDown(KeyCode.D) && score == 0)
+            if (Input.GetKeyDown(KeyCode.Space) && score == 0)
             {
                 one.SetActive(true);
                 score = 1;
                 ScoreSetUp.Instance.footNumber = 1;
             }
 
-            else if (Input.GetKeyDown(KeyCode.D) && score == 1)
+            else if (Input.GetKeyDown(KeyCode.Space) && score == 1)
             {
                 one.SetActive(false);
                 two.SetActive(true);
                 score = 2;
                 ScoreSetUp.Instance.footNumber = 2;
             }
-            else if (Input.GetKeyDown(KeyCode.D) && score == 2)
+            else if (Input.GetKeyDown(KeyCode.Space) && score == 2)
             {
                 two.SetActive(false);
                 three.SetActive(true);
@@ -45,7 +46,7 @@ public class FootSelection : MonoBehaviour
                 ScoreSetUp.Instance.footNumber = 3;
             }
 
-            else if (Input.GetKeyDown(KeyCode.D) && score == 3)
+            else if (Input.GetKeyDown(KeyCode.Space) && score == 3)
             {
                 three.SetActive(false);
                 score = 0;

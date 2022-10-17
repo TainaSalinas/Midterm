@@ -15,6 +15,7 @@ public class TorsoSelection : MonoBehaviour
     void Start()
     {
         score = 0;
+        ScoreSetUp.Instance.torsoNumber = 0;
     }
 
     void OnMouseDown()
@@ -25,43 +26,48 @@ public class TorsoSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (Input.GetKeyDown(KeyCode.D) && score == 0)
+            if (Input.GetKeyDown(KeyCode.Space) && score == 0)
             {
                 one.SetActive(true);
                 score = 1;
                 ScoreSetUp.Instance.torsoNumber = 1;
             }
 
-            else if (Input.GetKeyDown(KeyCode.D) && score == 1)
+            else if (Input.GetKeyDown(KeyCode.Space) && score == 1)
             {
                 one.SetActive(false);
                 two.SetActive(true);
                 score = 2;
+                ScoreSetUp.Instance.torsoNumber = 2;
             }
-            else if (Input.GetKeyDown(KeyCode.D) && score == 2)
+            else if (Input.GetKeyDown(KeyCode.Space) && score == 2)
             {
                 two.SetActive(false);
                 three.SetActive(true);
                 score = 3;
+                ScoreSetUp.Instance.torsoNumber = 3;
             }
 
-            else if (Input.GetKeyDown(KeyCode.D) && score == 3)
+            else if (Input.GetKeyDown(KeyCode.Space) && score == 3)
             {
                 three.SetActive(false);
                 four.SetActive(true);
                 score = 4;
+                ScoreSetUp.Instance.torsoNumber = 4;
             }
 
-            else if (Input.GetKeyDown(KeyCode.D) && score == 4)
+            else if (Input.GetKeyDown(KeyCode.Space) && score == 4)
             {
                 four.SetActive(false);
                 five.SetActive(true);
                 score = 5;
+                ScoreSetUp.Instance.torsoNumber = 5;
             }
-            else if (Input.GetKeyDown(KeyCode.D) && score == 5)
+            else if (Input.GetKeyDown(KeyCode.Space) && score == 5)
             {
                 five.SetActive(false);
                 score = 0;
+                ScoreSetUp.Instance.torsoNumber = 0;
             }
 
          
