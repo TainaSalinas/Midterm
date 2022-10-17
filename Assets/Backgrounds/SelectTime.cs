@@ -5,33 +5,25 @@ using UnityEngine;
 public class SelectTime : MonoBehaviour
 {
 
-    public GameObject BG;
-    public GameObject MG;
-    public GameObject FG;
-    public GameObject BGSelect;
-    public GameObject MGSelect;
-    public GameObject FGSelect;
+    public static SelectTime Instance { get; private set; }
+    public float BGNumber;
+    public float MGNumber;
+    public float FGNumber;
 
-    Ray ray;
-    RaycastHit hit;
-
+    private void Awake()
+    {
+        Instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(ray, out hit))
-            {
-                Debug.Log(hit.collider.name);
-            }
-        }
+        
     }
 }
 
