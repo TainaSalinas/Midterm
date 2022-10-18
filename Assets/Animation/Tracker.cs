@@ -14,8 +14,6 @@ public class Tracker : MonoBehaviour
     public GameObject Text6;
     public GameObject cover;
     public GameObject cover2;
-    public GameObject cover3;
-    public GameObject cover4;
     public static float score;
     public GameObject Arrow1;
     public GameObject Arrow2;
@@ -41,12 +39,14 @@ public class Tracker : MonoBehaviour
             Text3.SetActive(true);
             score = 2;
             Arrow1.SetActive(true);
+            cover.SetActive(true);
         }
 
         else if (Input.GetKeyDown(KeyCode.E) && score == 2)
         {
             Arrow2.SetActive(true);
             score = 3;
+            cover2.SetActive(true);
         }
 
         if (score == 4)
