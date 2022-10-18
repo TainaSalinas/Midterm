@@ -348,7 +348,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e5ad960f992fce4439a8143c4db0dc7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
   Text6: {fileID: 1598685050}
   Arrow1: {fileID: 2072345857}
   Arrow2: {fileID: 586113289}
-  Arrow3: {fileID: 0}
+  Arrow3: {fileID: 1452439407}
   SB: {fileID: 1630100282}
 --- !u!4 &511909192
 Transform:
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 586113293}
   - component: {fileID: 586113292}
   - component: {fileID: 586113291}
-  - component: {fileID: 586113290}
+  - component: {fileID: 586113294}
   m_Layer: 0
   m_Name: arrow2
   m_TagString: Untagged
@@ -448,21 +448,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &586113290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586113289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6b7b9acd34e5b47bf2f68ace057871, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1106234154}
-  clicks: 0
-  Painting: {fileID: 1324554088}
 --- !u!58 &586113291
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -546,6 +531,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &586113294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586113289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1344ae48a5a604caf95a0ca851a79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1106234154}
+  Painting: {fileID: 1324554088}
+  score: 0
+  arrow: {fileID: 1452439407}
 --- !u!1 &671817583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,29 +1240,14 @@ GameObject:
   - component: {fileID: 1452439411}
   - component: {fileID: 1452439410}
   - component: {fileID: 1452439409}
-  - component: {fileID: 1452439408}
+  - component: {fileID: 1452439412}
   m_Layer: 0
   m_Name: arrow3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1452439408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452439407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6b7b9acd34e5b47bf2f68ace057871, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1106234154}
-  clicks: 0
-  Painting: {fileID: 1324554088}
+  m_IsActive: 0
 --- !u!58 &1452439409
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1345,6 +1331,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452439412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452439407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be74574509a8d4b49acceee519deaba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1106234154}
+  Painting: {fileID: 1324554088}
+  score: 0
 --- !u!1 &1598685050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,5 +1881,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1106234154}
-  clicks: 0
-  Painting: {fileID: 1324554088}

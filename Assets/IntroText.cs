@@ -83,17 +83,29 @@ public class IntroText : MonoBehaviour
         {
             Cintique2.SetActive(false);
             StoryboardTrigger.SetActive(false);
+            Cintique1.SetActive(false);
+            CharacterTrigger.SetActive(false);
         }
         if (TheScreens.Complete == 30)
         {
             Cintique3.SetActive(false);
             BackgroundTrigger.SetActive(false);
+            Cintique2.SetActive(false);
+            StoryboardTrigger.SetActive(false);
+            Cintique1.SetActive(false);
+            CharacterTrigger.SetActive(false);
         }
 
         if (TheScreens.Complete == 40)
         {
             Cintique4.SetActive(false);
             AnimateTrigger.SetActive(false);
+            Cintique3.SetActive(false);
+            BackgroundTrigger.SetActive(false);
+            Cintique2.SetActive(false);
+            StoryboardTrigger.SetActive(false);
+            Cintique1.SetActive(false);
+            CharacterTrigger.SetActive(false);
         }
 
         if (TheScreens.Complete == 50)
@@ -101,6 +113,14 @@ public class IntroText : MonoBehaviour
             Cintique5.SetActive(false);
             AudioTrigger.SetActive(false);
             Final.SetActive(true);
+            Cintique4.SetActive(false);
+            AnimateTrigger.SetActive(false);
+            Cintique3.SetActive(false);
+            BackgroundTrigger.SetActive(false);
+            Cintique2.SetActive(false);
+            StoryboardTrigger.SetActive(false);
+            Cintique1.SetActive(false);
+            CharacterTrigger.SetActive(false);
         }
     }
 }

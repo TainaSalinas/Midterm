@@ -8,26 +8,21 @@ public class Paint : MonoBehaviour
     public Camera m_camera;
     public GameObject brush;
 
-
     LineRenderer currentLineRenderer;
 
     Vector2 lastPos;
 
+    // Start is called before the first frame update
+
     void Start()
     {
         Cursor.visible = true;
-
-        TextTracker.score = 4;
     }
 
-    private void Update()
+    void Update()
     {
         Draw();
-    }
-
-    void OnMouseDown()
-    {
-        
+        TextTracker.score = 4;
     }
 
     void Draw()
@@ -55,11 +50,11 @@ public class Paint : MonoBehaviour
     {
         GameObject brushInstance = Instantiate(brush);
         currentLineRenderer = brushInstance.GetComponent<LineRenderer>();
+
         Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
 
         currentLineRenderer.SetPosition(0, mousePos);
         currentLineRenderer.SetPosition(1, mousePos);
-
     }
 
     void AddAPoint(Vector2 pointPos)
