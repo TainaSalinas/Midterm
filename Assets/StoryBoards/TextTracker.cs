@@ -46,11 +46,13 @@ public class TextTracker : MonoBehaviour
             Text4.SetActive(true);
             score = 3;
             Arrow2.SetActive(true);
+            Arrow3.SetActive(true);
             Debug.Log("score3");
         }
 
         else if (Input.GetKeyDown(KeyCode.E) && score == 4)
         {
+            
             Text6.SetActive(true);
             score = 5;
             Text5.SetActive(false);

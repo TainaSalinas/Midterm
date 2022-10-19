@@ -124,6 +124,7 @@ public GameObject trapdoor;
         wind.SetActive(false);
         wave.SetActive(false);
         space.SetActive(false);
+        AudioTracker.score = 3;
     }
 
     IEnumerator TheThirdWave()
@@ -138,6 +139,7 @@ public GameObject trapdoor;
         subway.SetActive(false);
         cabinet.SetActive(false);
         trapdoor.SetActive(false);
+        AudioTracker.score = 4;
     }
 
     IEnumerator TheEnd()

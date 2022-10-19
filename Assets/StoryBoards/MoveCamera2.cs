@@ -16,7 +16,7 @@ public class MoveCamera2 : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (Tracker.score == 4 && Input.GetKeyDown(KeyCode.Mouse0))
+        if (TextTracker.score == 4 && Input.GetKeyDown(KeyCode.Mouse0))
         {
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(64f, 0.03f, -0.6589293f), 1);
             Painting.SetActive(false);

@@ -45,7 +45,7 @@ public class TriggerAnimate : MonoBehaviour
     {
         if (pos == true && Input.GetKeyDown(KeyCode.E))
         {
-
+            SceneManager.LoadScene("Animation", LoadSceneMode.Single);
         }
 
         else if (neg == true && Input.GetKeyDown(KeyCode.E))
