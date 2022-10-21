@@ -18,6 +18,9 @@ public class TextTracker : MonoBehaviour
     public GameObject Arrow2;
     public GameObject Arrow3;
     public GameObject SB;
+    public GameObject cover1;
+    public GameObject cover2;
+    public GameObject cover3;
 
     // Start is called before the first frame update
     void Start()
@@ -34,12 +37,14 @@ public class TextTracker : MonoBehaviour
             score = 1;
             Text1.SetActive(false);
             SB.SetActive(false);
+            cover1.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.E) && score == 1)
         {
             Text3.SetActive(true);
             score = 2;
             Arrow1.SetActive(true);
+            cover2.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.E) && score == 2)
         {
@@ -47,6 +52,7 @@ public class TextTracker : MonoBehaviour
             score = 3;
             Arrow2.SetActive(true);
             Arrow3.SetActive(true);
+            cover3.SetActive(true);
             Debug.Log("score3");
         }
 
