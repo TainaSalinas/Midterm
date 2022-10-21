@@ -67,6 +67,9 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        ///~~~Movement~~~///
+
         Vector3 pos = transform.position;
 
         if (Input.GetKey(upKey))
@@ -91,12 +94,12 @@ public class playerController : MonoBehaviour
 
         transform.position = pos;
 
-        ///////////////////////////////
+        ///~~~Interacting With Blue NPCS~~~///
 
         if (pos1 == true && Input.GetKeyDown(KeyCode.E))
         {
             Ntext.SetActive(true);
-            score = 1;
+            score++;
         }
 
        else if (pos1 == true && score == 1 && Input.GetKeyDown(KeyCode.E))

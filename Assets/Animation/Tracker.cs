@@ -18,6 +18,8 @@ public class Tracker : MonoBehaviour
     public GameObject Arrow1;
     public GameObject Arrow2;
     public GameObject Arrow3;
+    public GameObject Arrow4;
+    public GameObject Arrow5;
 
     // Start is called before the first frame update
     void Start()
@@ -51,19 +53,35 @@ public class Tracker : MonoBehaviour
 
         if (score == 4)
         {
+            Debug.Log("Work");
             Arrow3.SetActive(true);
             score = 5;
+            //Text5.SetActive(true);
+        }
+
+        if(score == 5)
+        {
+            Debug.Log("We're Doing it");
+            Arrow4.SetActive(true);
+            score = 6;
+        }
+
+        if(score == 6)
+        {
+            Debug.Log("AH");
+            Arrow5.SetActive(true);
+            score = 7;
             Text5.SetActive(true);
         }
 
-        else if (Input.GetKeyDown(KeyCode.E) && score == 5)
+        else if (Input.GetKeyDown(KeyCode.E) && score == 7)
         {
-            score = 6;
+            score = 8;
             Text5.SetActive(false);
             Text6.SetActive(true);
         }
 
-        else if (Input.GetKeyDown(KeyCode.E) && score == 6)
+        else if (Input.GetKeyDown(KeyCode.E) && score == 8)
         {
             TheScreens.Complete = 40;
             SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
