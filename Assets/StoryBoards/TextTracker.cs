@@ -22,6 +22,8 @@ public class TextTracker : MonoBehaviour
     public GameObject cover2;
     public GameObject cover3;
 
+    public AudioSource Text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class TextTracker : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && score == 0)
         {
+            this.GetComponent<AudioSource>().Play();
             Text2.SetActive(true);
             score = 1;
             Text1.SetActive(false);
@@ -41,6 +44,7 @@ public class TextTracker : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.E) && score == 1)
         {
+            this.GetComponent<AudioSource>().Play();
             Text3.SetActive(true);
             score = 2;
             Arrow1.SetActive(true);
@@ -48,6 +52,7 @@ public class TextTracker : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.E) && score == 2)
         {
+            this.GetComponent<AudioSource>().Play();
             Text4.SetActive(true);
             score = 3;
             Arrow2.SetActive(true);
@@ -58,7 +63,7 @@ public class TextTracker : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.E) && score == 4)
         {
-            
+            this.GetComponent<AudioSource>().Play();
             Text6.SetActive(true);
             score = 5;
             Text5.SetActive(false);
@@ -66,6 +71,7 @@ public class TextTracker : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.E) && score == 5)
         {
+            this.GetComponent<AudioSource>().Play();
             TheScreens.Complete = 20;
             SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         }

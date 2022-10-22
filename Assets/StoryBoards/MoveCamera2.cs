@@ -5,6 +5,8 @@ using UnityEngine;
 public class MoveCamera2 : MonoBehaviour
 {
 
+    public AudioSource Page;
+
     public GameObject cam;
     public GameObject Painting;
 
@@ -18,6 +20,7 @@ public class MoveCamera2 : MonoBehaviour
     {
         if (TextTracker.score == 4 && Input.GetKeyDown(KeyCode.Mouse0))
         {
+            this.GetComponent<AudioSource>().Play();
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(64f, 0.03f, -0.6589293f), 1);
             Painting.SetActive(false);
 

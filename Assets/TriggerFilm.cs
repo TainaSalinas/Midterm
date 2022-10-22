@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class TriggerFilm : MonoBehaviour
 {
 
+    public AudioSource End;
+    public AudioClip FilmReel;
+    public AudioClip Text;
+
     public GameObject Text1;
     public GameObject Text2;
     public GameObject Text3;
@@ -19,6 +23,7 @@ public class TriggerFilm : MonoBehaviour
     void Start()
     {
         number = 0;
+        End = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -26,6 +31,7 @@ public class TriggerFilm : MonoBehaviour
         if (collision.gameObject.name == "player_front")
         {
             number = 1;
+            End.PlayOneShot(FilmReel, 1f);
         }
     }
 
@@ -43,6 +49,7 @@ public class TriggerFilm : MonoBehaviour
             Text2.SetActive(true);
             number = 3;
             Text1.SetActive(false);
+            End.PlayOneShot(Text, 1f);
         }
 
         else if (Input.GetKeyDown(KeyCode.E) && number == 3)
@@ -50,6 +57,8 @@ public class TriggerFilm : MonoBehaviour
             Text3.SetActive(true);
             number = 4;
             Text2.SetActive(false);
+            End.PlayOneShot(Text, 1f);
+
         }
 
         else if (Input.GetKeyDown(KeyCode.E) && number == 4)
@@ -57,6 +66,8 @@ public class TriggerFilm : MonoBehaviour
             Text4.SetActive(true);
             number = 5;
             Text3.SetActive(false);
+            End.PlayOneShot(Text, 1f);
+
         }
 
         else if (Input.GetKeyDown(KeyCode.E) && number == 5)
@@ -64,6 +75,8 @@ public class TriggerFilm : MonoBehaviour
             Text5.SetActive(true);
             number = 6;
             Text4.SetActive(false);
+            End.PlayOneShot(Text, 1f);
+
         }
 
         else if (Input.GetKeyDown(KeyCode.E) && number == 6)
@@ -71,10 +84,13 @@ public class TriggerFilm : MonoBehaviour
             Text6.SetActive(true);
             number = 7;
             Text5.SetActive(false);
+            End.PlayOneShot(Text, 1f);
+
         }
 
         else if (Input.GetKeyDown(KeyCode.E) && number == 7)
         {
+            End.PlayOneShot(Text, 1f);
             SceneManager.LoadScene("EndScreen", LoadSceneMode.Single);
         }
     }

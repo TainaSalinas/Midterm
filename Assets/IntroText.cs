@@ -5,6 +5,8 @@ using UnityEngine;
 public class IntroText : MonoBehaviour
 {
 
+    public AudioSource Beginning;
+
     public GameObject Text1;
     public GameObject Text2;
     public GameObject Text3;
@@ -42,6 +44,7 @@ public class IntroText : MonoBehaviour
                 Text2.SetActive(true);
                 Text1.SetActive(false);
                 number = 1;
+                this.GetComponent<AudioSource>().Play();
             }
 
             else if (Input.GetKeyDown(KeyCode.E) && number == 1)
@@ -49,6 +52,7 @@ public class IntroText : MonoBehaviour
                 Text3.SetActive(true);
                 Text2.SetActive(false);
                 number = 2;
+                this.GetComponent<AudioSource>().Play();
             }
 
             else if (Input.GetKeyDown(KeyCode.E) && number == 2)
@@ -56,6 +60,7 @@ public class IntroText : MonoBehaviour
                 Text4.SetActive(true);
                 Text3.SetActive(false);
                 number = 3;
+                this.GetComponent<AudioSource>().Play();
             }
 
             else if (Input.GetKeyDown(KeyCode.E) && number == 3)
@@ -64,6 +69,7 @@ public class IntroText : MonoBehaviour
                 number = 4;
                 player.SetActive(true);
                 FirstCamera.SetActive(false);
+                this.GetComponent<AudioSource>().Play();
             }
         } 
         else

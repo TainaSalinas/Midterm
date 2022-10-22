@@ -40,6 +40,7 @@ public class playerController : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+        ChangeAnimationState(Player_Idle_Down);
     }
 
     void ChangeAnimationState(string newState)

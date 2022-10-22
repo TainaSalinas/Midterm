@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveCamera : MonoBehaviour
 {
 
+    public AudioSource Page;
     public GameObject cam;
 
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class MoveCamera : MonoBehaviour
         if (TextTracker.score == 2 && Input.GetKeyDown(KeyCode.Mouse0))
         {
             cam.GetComponent<Renderer>().material.color = Color.red;
+            this.GetComponent<AudioSource>().Play();
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(20.3f, 0.03f, -0.6589293f), 1);
            
         }
