@@ -21,10 +21,14 @@ public GameObject trapdoor;
     public GameObject SecWave;
     public GameObject ThiWave;
 
+    public AudioSource Sound;
+    public AudioClip Confirm;
+    public AudioClip Wrong;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Sound = GetComponent<AudioSource>();
     }
 
     void OnMouseDown()
@@ -99,6 +103,7 @@ public GameObject trapdoor;
 
     IEnumerator FlashWrong()
     {
+        Sound.PlayOneShot(Wrong, 1f);
         GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         GetComponent<Renderer>().material.color = Color.white;
@@ -114,6 +119,7 @@ public GameObject trapdoor;
 
     IEnumerator TheSecondWave()
     {
+        Sound.PlayOneShot(Confirm, 1f);
         rain.GetComponent<Renderer>().material.color = Color.green;
         wind.GetComponent<Renderer>().material.color = Color.red;
         wave.GetComponent<Renderer>().material.color = Color.red;
@@ -129,6 +135,7 @@ public GameObject trapdoor;
 
     IEnumerator TheThirdWave()
     {
+        Sound.PlayOneShot(Confirm, 1f);
         door.GetComponent<Renderer>().material.color = Color.green;
         subway.GetComponent<Renderer>().material.color = Color.red;
         cabinet.GetComponent<Renderer>().material.color = Color.red;
@@ -144,6 +151,7 @@ public GameObject trapdoor;
 
     IEnumerator TheEnd()
     {
+        Sound.PlayOneShot(Confirm, 1f);
         footstep.GetComponent<Renderer>().material.color = Color.green;
         animals.GetComponent<Renderer>().material.color = Color.red;
         bicycle.GetComponent<Renderer>().material.color = Color.red;

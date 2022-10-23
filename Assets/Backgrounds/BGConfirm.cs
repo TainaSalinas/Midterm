@@ -15,6 +15,11 @@ public class BGConfirm : MonoBehaviour
     public GameObject Text4;
     public float number;
 
+    public AudioSource Confirm;
+    public AudioClip Correct;
+    public AudioClip Wrong;
+    public AudioClip Text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +27,7 @@ public class BGConfirm : MonoBehaviour
         score1 = 0;
         score2 = 0;
         number = 0;
+        Confirm = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,18 +35,21 @@ public class BGConfirm : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && number == 0)
         {
+            Confirm.PlayOneShot(Text, 1f);
             Text2.SetActive(true);
             number = 1;
             Text1.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.E) && number == 1)
         {
+            Confirm.PlayOneShot(Text, 1f);
             Text3.SetActive(true);
             number = 2;
             Text2.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.E) && number == 2)
         {
+            Confirm.PlayOneShot(Text, 1f);
             Text4.SetActive(true);
             number = 3;
             Text3.SetActive(false);
@@ -83,6 +92,7 @@ public class BGConfirm : MonoBehaviour
 
     IEnumerator TheEnd()
     {
+        Confirm.PlayOneShot(Correct, 1f);
         GetComponent<Renderer>().material.color = Color.green;
         yield return new WaitForSeconds(1);
         TheScreens.Complete = 30;
@@ -92,6 +102,7 @@ public class BGConfirm : MonoBehaviour
 
     IEnumerator FlashWrong()
     {
+        Confirm.PlayOneShot(Wrong, 1f);
         GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         GetComponent<Renderer>().material.color = Color.white;

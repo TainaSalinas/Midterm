@@ -12,6 +12,8 @@ public class AudioTracker : MonoBehaviour
     public GameObject Text5;
     public static float score;
 
+    public AudioSource Text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class AudioTracker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && score == 0)
         {
+            this.GetComponent<AudioSource>().Play();
             Text2.SetActive(true);
             score = 1;
             Text1.SetActive(false);
@@ -30,6 +33,7 @@ public class AudioTracker : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.E) && score == 1)
         {
+            this.GetComponent<AudioSource>().Play();
             Text3.SetActive(true);
             score = 2;
             Text2.SetActive(false);

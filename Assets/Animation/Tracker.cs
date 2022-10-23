@@ -21,6 +21,8 @@ public class Tracker : MonoBehaviour
     public GameObject Arrow4;
     public GameObject Arrow5;
 
+    public AudioSource Text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +34,14 @@ public class Tracker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && score == 0)
         {
+            this.GetComponent<AudioSource>().Play();
             Text2.SetActive(true);
             score = 1;
             Text1.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.E) && score == 1)
         {
+            this.GetComponent<AudioSource>().Play();
             Text3.SetActive(true);
             score = 2;
             Arrow1.SetActive(true);
@@ -46,6 +50,7 @@ public class Tracker : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.E) && score == 2)
         {
+            this.GetComponent<AudioSource>().Play();
             Arrow2.SetActive(true);
             score = 3;
             cover2.SetActive(true);
@@ -76,6 +81,7 @@ public class Tracker : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.E) && score == 7)
         {
+            this.GetComponent<AudioSource>().Play();
             score = 8;
             Text5.SetActive(false);
             Text6.SetActive(true);
@@ -83,6 +89,7 @@ public class Tracker : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.E) && score == 8)
         {
+            this.GetComponent<AudioSource>().Play();
             TheScreens.Complete = 40;
             SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         }

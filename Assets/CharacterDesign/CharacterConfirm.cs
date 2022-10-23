@@ -18,6 +18,11 @@ public class CharacterConfirm : MonoBehaviour
     public GameObject Text4;
     public GameObject Text5;
 
+    public AudioSource Confirm;
+    public AudioClip Correct;
+    public AudioClip Wrong;
+    public AudioClip Text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +31,7 @@ public class CharacterConfirm : MonoBehaviour
         score2 = 0;
         score3 = 0;
         number = 0;
+        Confirm = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -33,24 +39,28 @@ public class CharacterConfirm : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && number == 0)
         {
+            Confirm.PlayOneShot(Text, 1f);
             Text2.SetActive(true);
             number = 1;
             Text1.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.E) && number == 1)
         {
+            Confirm.PlayOneShot(Text, 1f);
             Text3.SetActive(true);
             number = 2;
             Text2.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.E) && number == 2)
         {
+            Confirm.PlayOneShot(Text, 1f);
             Text4.SetActive(true);
             number = 3;
             Text3.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.E) && number == 3)
         {
+            Confirm.PlayOneShot(Text, 1f);
             Text5.SetActive(true);
             number = 4;
             Text4.SetActive(false);
@@ -120,6 +130,7 @@ public class CharacterConfirm : MonoBehaviour
 
     IEnumerator TheEnd()
     {
+        Confirm.PlayOneShot(Correct, 1f);
         body.GetComponent<Renderer>().material.color = Color.green;
         yield return new WaitForSeconds(1);
         TheScreens.Complete = 10;
@@ -129,6 +140,7 @@ public class CharacterConfirm : MonoBehaviour
 
     IEnumerator FlashWrong()
     {
+        Confirm.PlayOneShot(Wrong, 1f);
         body.GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         body.GetComponent<Renderer>().material.color = Color.white;

@@ -6,6 +6,7 @@ public class CameraMovement3 : MonoBehaviour
 {
 
     public GameObject cam;
+    public AudioSource Page;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class CameraMovement3 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            this.GetComponent<AudioSource>().Play();
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(84f, 0.03f, -0.6589293f), 1);
         }
     }

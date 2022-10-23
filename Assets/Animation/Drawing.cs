@@ -7,6 +7,8 @@ public class Drawing : MonoBehaviour
     public Camera m_camera;
     public GameObject brush;
 
+    public AudioSource Pencil;
+
     LineRenderer currentLineRenderer;
 
     Vector2 lastPos;
@@ -24,6 +26,7 @@ public class Drawing : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             CreateBrush();
+            this.GetComponent<AudioSource>().Play();
         }
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -35,6 +38,7 @@ public class Drawing : MonoBehaviour
             }
         } else
         {
+            this.GetComponent<AudioSource>().Stop();
             currentLineRenderer = null;
         }
     }

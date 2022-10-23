@@ -6,6 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
 
     public GameObject cam;
+    public AudioSource Page;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (Tracker.score == 2 && Input.GetKeyDown(KeyCode.Mouse0))
         {
+            this.GetComponent<AudioSource>().Play();
             cam.GetComponent<Renderer>().material.color = Color.red;
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(20.3f, 0.03f, -0.6589293f), 1);
 
