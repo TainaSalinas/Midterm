@@ -12,11 +12,15 @@ public class TriggerE : MonoBehaviour
     public bool neg = false;
     public GameObject Mouse;
 
+    public AudioSource Select;
+    public AudioClip CantAccess;
+    public AudioClip Okay;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Select = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -49,10 +53,12 @@ public class TriggerE : MonoBehaviour
     {
         if (pos == true && Input.GetKeyDown(KeyCode.E))
         {
+            Select.PlayOneShot(Okay, 1f);
             SceneManager.LoadScene("SoundDesign", LoadSceneMode.Single);
         }
         else if (neg == true && Input.GetKeyDown(KeyCode.E))
         {
+            Select.PlayOneShot(CantAccess, 1f);
             TryAgain.SetActive(true);
         }
     }

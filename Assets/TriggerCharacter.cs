@@ -11,6 +11,9 @@ public class TriggerCharacter : MonoBehaviour
     public bool pos;
     public bool neg;
 
+    public AudioSource Select;
+
+
     // Start is called before the first frame update
     void Start()
     {
