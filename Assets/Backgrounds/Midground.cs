@@ -9,6 +9,8 @@ public class Midground : MonoBehaviour
     public GameObject MGSelect;
     public GameObject FGSelect;
 
+    public AudioSource Select;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Midground : MonoBehaviour
 
     void OnMouseDown()
     {
+        this.GetComponent<AudioSource>().Play();
         MGSelect.SetActive(true);
         BGSelect.SetActive(false);
         FGSelect.SetActive(false);

@@ -9,6 +9,8 @@ public class BG : MonoBehaviour
     public GameObject MGSelect;
     public GameObject FGSelect;
 
+    public AudioSource Select;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class BG : MonoBehaviour
 
     void OnMouseDown()
     {
+        this.GetComponent<AudioSource>().Play();
         BGSelect.SetActive(true);
         MGSelect.SetActive(false);
         FGSelect.SetActive(false);
