@@ -1,0 +1,55 @@
+For my midterm, I included a good few different kinds 
+of mechanics. There's of course player movement and interacting 
+with objects so that there's an exploratory feel to the game
+similar to Treasure Hunt, but I also included a few others: 
+
+1) For the Animation and Storyboard minigames, I 
+included a drawing mechanic where you trace the 
+sketch on the frame. Since my game is all about
+the different departments of my animation class, 
+I had to include storyboarding and animation somehow.
+And since coding in a genuine way the ability to draw
+entire storyboards and animations takes a lot longer 
+than 3 weeks, I had to figure out a simple yet effective 
+way to get the idea across. So, I came up with a simple
+draw tool and stencil idea that would give the vibe
+of drawing without you having to actually spend too much
+time trying to draw a legit frame.
+(I also left the area around the frame draw-able
+purposefully, both to allow the player to mess around
+with the brush if they wanted, and also to emulate the 
+fact that my classmates and I would doodle outside of
+frame pretty often).
+
+2) For the BG and Character Design minigames, I made a 
+type of dress up game mechanic (to be honest, I don't know
+what to call it, but it reminds me of old dress up games where
+you keep pressing the arrow to find the outfit you like). BG
+and character design are also important in making a short film,
+so I wanted to include them too. But just like storyboarding/
+animation, allowing the player to fully create an actual 
+background and/or character would be super hard to code 
+(at least for me), so I tried to simplify it in a fun but easier way.
+The way I came up with ended up being this dress-up game
+mechanic, that way you can feel like your creating the
+character/background without actually fully creating it. There 
+is still a right answer in order to easily progress the game, 
+but the player still is freely able to mix and match the parts
+of the character/background if they want.
+
+3) Lastly I had the quiz type mechanic for the sound design minigame.
+As with all the rest of the minigames, implementing how a department
+would actually function into a 5 min little game is incredibly hard (and
+would be incredibly time consuming). When it came to the sound minigame,
+I thought the easiest way to go about it was to have the player pick "good" 
+sounds for the hypothetical film. The easiest way to do this in my mind was
+to make it a little game where you were given a prompt and had to select
+the correct sound for it. That way it gave the feeling of searching for
+sounds for the film (like I had to constantly do when I was in that department), 
+without making it genuinely tasking with having to select a sound, edit 
+the sound, and mix it so it properly fit the "film's" vibe.
+
+For each of these mechanics, I wanted to find a simplified way to encapsulate
+the feeling of each department. Through these minigames I implemented
+the mechanics in a way that would be able to both progress the game while
+still giving off vibes of each job. 
