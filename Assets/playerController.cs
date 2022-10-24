@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
-    public float hForce = 4;
-    public float vForce = 4;
+    public float hForce;
+    public float vForce;
 
     public KeyCode upKey = KeyCode.W;
     public KeyCode leftKey = KeyCode.A;
@@ -41,6 +41,8 @@ public class playerController : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
         ChangeAnimationState(Player_Idle_Down);
+        hForce = 4;
+        vForce = 4;
     }
 
     void ChangeAnimationState(string newState)
@@ -106,8 +108,16 @@ public class playerController : MonoBehaviour
         }
 
         transform.position = pos;
+               
+    }
 
-        
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "FilmReel")
+        {
+            hForce = 0;
+            vForce = 0;
+        }
     }
 
     /* void OnTriggerEnter2D(Collider2D collision)

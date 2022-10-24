@@ -17,7 +17,7 @@ public class TriggerFilm : MonoBehaviour
     public GameObject Text5;
     public GameObject Text6;
     public GameObject Film;
-    public float number;
+    public static float number;
 
     // Start is called before the first frame update
     void Start()

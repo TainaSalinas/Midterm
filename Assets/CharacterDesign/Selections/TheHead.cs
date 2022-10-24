@@ -13,6 +13,9 @@ public class TheHead : MonoBehaviour
     public GameObject LegArrow;
     public GameObject FootArrow;
 
+    public AudioSource Select;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,7 @@ public class TheHead : MonoBehaviour
 
     void OnMouseDown()
     {
+        this.GetComponent<AudioSource>().Play();
         HeadOutfits.SetActive(true);
         HeadArrow.SetActive(true);
         TorsoOutfits.SetActive(false);
